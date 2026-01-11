@@ -1,0 +1,29 @@
+.flex{
+    display: flex;
+}
+.item-center{
+    align-items: center;
+}
+.justify-center{
+    justify-content: center;
+}
+.border{
+   /* border: 2px solid rgb(8, 0, 0); */
+   margin: 3px;
+   border-radius: 8px;
+}
+.cursor{
+    cursor: pointer;
+}
+#search-input{
+    background: transparent;
+        border: none;
+        outline: none;
+        color: white;
+        font-size: 16px;
+        flex: 1;
+        width: 95%;
+        justify-content: center;
+        align-items: center;
+    
+}
