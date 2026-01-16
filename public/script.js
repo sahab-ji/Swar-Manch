@@ -78,8 +78,8 @@ function changeIcon(icon) {
         currentaudio.volume=currentVolume;
         attachProgress(currentaudio);
 
-        useTag.setAttribute("href", "/svg/pause.svg");
-        // img.src = "/svg/pause.svg";
+        
+        img.src = "/svg/pause.svg";
         document.querySelector(".allplay").src = "https://www.svgrepo.com/show/535553/pause.svg";
         currentaudio.play();
     }
