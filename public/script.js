@@ -44,7 +44,7 @@ function changeImage(img) {
 function changeIcon(icon) {
 
     let music = document.querySelector(".music");
-    music.classList.remove("hidden");
+    music.style.display="grid";
     let rightgrid = document.querySelector(".rightgrid");
     rightgrid.style.gridtemplaterows="70px minmax(0,1fr) 100px";
 
@@ -659,6 +659,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, { once: false });
     });
 });
+
 
 
 
