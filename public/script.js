@@ -28,7 +28,7 @@ function changeImage(img) {
             icon.src = "https://www.svgrepo.com/show/522226/play.svg";
         });
         document.querySelectorAll(".play-svg").forEach(icon => {
-            icon.src = "public/svg/play.svg";
+            icon.src = "/svg/play.svg";
         });
         img.src = "https://www.svgrepo.com/show/535553/pause.svg";
         document.querySelector(".allplay").src = "https://www.svgrepo.com/show/535553/pause.svg";
@@ -50,8 +50,8 @@ function changeIcon(icon) {
     currentaudio.volume=currentVolume;
     attachProgress(currentaudio);
 
-    if ((img.src.includes("public/svg/pause.svg"))) {
-        img.src = "public/svg/play.svg";
+    if ((img.src.includes("/svg/pause.svg"))) {
+        img.src = "/svg/play.svg";
         document.querySelector(".allplay").src = "https://www.svgrepo.com/show/522226/play.svg";
 
         currentaudio.pause();
@@ -64,12 +64,12 @@ function changeIcon(icon) {
             audio.currentTime = 0;
         });
         document.querySelectorAll(".play-svg").forEach(icon => {
-            icon.src = "public/svg/play.svg";
+            icon.src = "/svg/play.svg";
         });
         document.querySelectorAll(".play").forEach(icon => {
             icon.src = "https://www.svgrepo.com/show/522226/play.svg";
         });
-        img.src = "public/svg/pause.svg";
+        img.src = "/svg/pause.svg";
         document.querySelector(".allplay").src = "https://www.svgrepo.com/show/535553/pause.svg";
         currentaudio.play();
     }
@@ -80,7 +80,7 @@ function change(img) {
         img.src = "https://www.svgrepo.com/show/522226/play.svg";
         currentaudio.pause();
         document.querySelectorAll(".play-svg").forEach(icon => {
-            icon.src = "public/svg/play.svg";
+            icon.src = "/svg/play.svg";
         });
         document.querySelectorAll(".play").forEach(icon => {
             icon.src = "https://www.svgrepo.com/show/522226/play.svg";
@@ -237,11 +237,11 @@ Trendsongs.forEach((song, index) => {
     card.className = "card border";
 
     card.innerHTML = `
-    <audio  data-index="${index}" data-type="trend" class="music1" src="public/songs/${song.audio}"></audio>
+    <audio  data-index="${index}" data-type="trend" class="music1" src="/songs/${song.audio}"></audio>
     <div style="width:100%;height:70%;position:relative;">
       <img style="width:99%;height:99%;" src="${song.image}">
       <div onclick="changeIcon(this)" class="play-icon">
-        <img data-index="${index}" data-type="trend" class="play-svg invert" src="public/svg/play.svg">
+        <img data-index="${index}" data-type="trend" class="play-svg invert" src="/svg/play.svg">
       </div>
     </div>
     <div>
@@ -380,7 +380,7 @@ songs.forEach((song, index) => {
 
     <img style="width:50px;height:50px;border-radius: 10px;"
         src="${song.image}">
-        <audio  data-index="${index}" data-type="simple" class="music1" src="public/songs/${song.audio}"></audio>
+        <audio  data-index="${index}" data-type="simple" class="music1" src="/songs/${song.audio}"></audio>
         <div style="font-size:12px;">
             <div style="font-weight:600;white-space: nowrap;text-overflow: ellipsis;
             overflow: hidden;">${song.title}</div>
@@ -482,7 +482,7 @@ function forward(forward) {
     const img = document.querySelector(".allplay");
     img.src = "https://www.svgrepo.com/show/535553/pause.svg";
     document.querySelectorAll(".play-svg").forEach(icon => {
-        icon.src = "public/svg/play.svg";
+        icon.src = "/svg/play.svg";
     });
     document.querySelectorAll(".play").forEach(icon => {
         icon.src = "https://www.svgrepo.com/show/522226/play.svg";
@@ -491,7 +491,7 @@ function forward(forward) {
     if (type === "trend") {
         let icon = document.querySelector(
             `.play-svg[data-index="${nextIndex}"][data-type="${type}"]`);
-        icon.src = "public/svg/pause.svg";
+        icon.src = "/svg/pause.svg";
     }
     else {
         let icon = document.querySelector(
@@ -527,7 +527,7 @@ function backward(backward) {
     const img = document.querySelector(".allplay");
     img.src = "https://www.svgrepo.com/show/535553/pause.svg";
     document.querySelectorAll(".play-svg").forEach(icon => {
-        icon.src = "public/svg/play.svg";
+        icon.src = "/svg/play.svg";
     });
     document.querySelectorAll(".play").forEach(icon => {
         icon.src = "https://www.svgrepo.com/show/522226/play.svg";
@@ -536,7 +536,7 @@ function backward(backward) {
     if (type === "trend") {
         let icon = document.querySelector(
             `.play-svg[data-index="${nextIndex}"][data-type="${type}"]`);
-        icon.src = "public/svg/pause.svg";
+        icon.src = "/svg/pause.svg";
     }
     else {
         let icon = document.querySelector(
@@ -636,6 +636,7 @@ volumeBar.addEventListener("click", (e) => {
     const percent = clickX / rect.width;
     setVolume(percent);
 });
+
 
 
 
