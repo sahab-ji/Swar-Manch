@@ -77,8 +77,9 @@ function changeIcon(icon) {
         currentaudio = audio;
         currentaudio.volume=currentVolume;
         attachProgress(currentaudio);
-        
-        img.src = "/svg/pause.svg";
+
+        useTag.setAttribute("href", "/svg/pause.svg");
+        // img.src = "/svg/pause.svg";
         document.querySelector(".allplay").src = "https://www.svgrepo.com/show/535553/pause.svg";
         currentaudio.play();
     }
@@ -659,6 +660,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, { once: false });
     });
 });
+
 
 
 
