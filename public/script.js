@@ -8,13 +8,13 @@ function changeImage(img) {
     rightgrid.style.gridtemplaterows="70px minmax(0,1fr) 100px";
     let card = img.closest(".music-card");
     let audio = card.querySelector(".music1");
-    currentaudio = audio;
-    currentaudio.volume=currentVolume;
-    attachProgress(currentaudio);
+   
 
     if ((img.src.includes("ause.svg"))) {
         img.src = "https://www.svgrepo.com/show/522226/play.svg";
         document.querySelector(".allplay").src = "https://www.svgrepo.com/show/522226/play.svg";
+
+        if(currentaudio)
         currentaudio.pause();
     }
 
@@ -30,6 +30,11 @@ function changeImage(img) {
         document.querySelectorAll(".play-svg").forEach(icon => {
             icon.src = "/svg/play.svg";
         });
+
+        currentaudio = audio;
+        currentaudio.volume=currentVolume;
+        attachProgress(currentaudio);
+        
         img.src = "https://www.svgrepo.com/show/535553/pause.svg";
         document.querySelector(".allplay").src = "https://www.svgrepo.com/show/535553/pause.svg";
         currentaudio.play();
@@ -46,14 +51,13 @@ function changeIcon(icon) {
     let card = icon.closest(".card");
     let audio = card.querySelector(".music1");
     let img = icon.querySelector(".play-svg")
-    currentaudio = audio;
-    currentaudio.volume=currentVolume;
-    attachProgress(currentaudio);
+    
 
     if ((img.src.includes("/svg/pause.svg"))) {
         img.src = "/svg/play.svg";
         document.querySelector(".allplay").src = "https://www.svgrepo.com/show/522226/play.svg";
 
+        if(currentaudio)
         currentaudio.pause();
     }
 
@@ -69,6 +73,11 @@ function changeIcon(icon) {
         document.querySelectorAll(".play").forEach(icon => {
             icon.src = "https://www.svgrepo.com/show/522226/play.svg";
         });
+
+        currentaudio = audio;
+        currentaudio.volume=currentVolume;
+        attachProgress(currentaudio);
+        
         img.src = "/svg/pause.svg";
         document.querySelector(".allplay").src = "https://www.svgrepo.com/show/535553/pause.svg";
         currentaudio.play();
@@ -237,7 +246,7 @@ Trendsongs.forEach((song, index) => {
     card.className = "card border";
 
     card.innerHTML = `
-    <audio  data-index="${index}" data-type="trend" class="music1" src="/songs/${song.audio}"></audio>
+    <audio preload="metadata" data-index="${index}" data-type="trend" class="music1" src="/songs/${song.audio}"></audio>
     <div style="width:100%;height:70%;position:relative;">
       <img style="width:99%;height:99%;" src="${song.image}">
       <div onclick="changeIcon(this)" class="play-icon">
@@ -380,7 +389,7 @@ songs.forEach((song, index) => {
 
     <img style="width:50px;height:50px;border-radius: 10px;"
         src="${song.image}">
-        <audio  data-index="${index}" data-type="simple" class="music1" src="/songs/${song.audio}"></audio>
+        <audio preload="metadata" data-index="${index}" data-type="simple" class="music1" src="/songs/${song.audio}"></audio>
         <div style="font-size:12px;">
             <div style="font-weight:600;white-space: nowrap;text-overflow: ellipsis;
             overflow: hidden;">${song.title}</div>
@@ -636,6 +645,7 @@ volumeBar.addEventListener("click", (e) => {
     const percent = clickX / rect.width;
     setVolume(percent);
 });
+
 
 
 
