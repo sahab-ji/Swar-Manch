@@ -246,7 +246,7 @@ Trendsongs.forEach((song, index) => {
     card.className = "card border";
 
     card.innerHTML = `
-    <audio preload="metadata" data-index="${index}" data-type="trend" class="music1" src="/songs/${song.audio}"></audio>
+    <audio preload="auto" data-index="${index}" data-type="trend" class="music1" src="/songs/${song.audio}"></audio>
     <div style="width:100%;height:70%;position:relative;">
       <img style="width:99%;height:99%;" src="${song.image}">
       <div onclick="changeIcon(this)" class="play-icon">
@@ -389,7 +389,7 @@ songs.forEach((song, index) => {
 
     <img style="width:50px;height:50px;border-radius: 10px;"
         src="${song.image}">
-        <audio preload="metadata" data-index="${index}" data-type="simple" class="music1" src="/songs/${song.audio}"></audio>
+        <audio preload="auto" data-index="${index}" data-type="simple" class="music1" src="/songs/${song.audio}"></audio>
         <div style="font-size:12px;">
             <div style="font-weight:600;white-space: nowrap;text-overflow: ellipsis;
             overflow: hidden;">${song.title}</div>
@@ -659,6 +659,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, { once: false });
     });
 });
+
 
 
 
