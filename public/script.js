@@ -41,6 +41,9 @@ function changeImage(img) {
     }
 }
 
+<link rel="preload" href="svg/play.svg" as="image">
+<link rel="preload" href="svg/pause.svg" as="image">
+
 function changeIcon(icon) {
 
     let music = document.querySelector(".music");
@@ -612,7 +615,7 @@ const volumeBar = document.querySelector(".volume-bar");
 const volumeFill = document.querySelector(".volume-fill");
 const volumePoint = document.querySelector(".volumepoint");
 
-let currentVolume = 0.5;
+let currentVolume = 1;
 
 function setVolume(percent) {
     if(percent!=0)
@@ -660,6 +663,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, { once: false });
     });
 });
+
 
 
 
