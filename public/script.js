@@ -115,7 +115,7 @@ const Trendsongs = [
     {
         title: 'Gehra Hua',
         artist: 'Shashwat Sachdev, Arijit Singh',
-        audio: 'gehra.mpeg',
+        audio: 'gehra.mp3',
         image: 'https://i.scdn.co/image/ab67616d00001e02c53e5adf9f81693d62f98019'
     },
     {
@@ -139,7 +139,7 @@ const Trendsongs = [
     {
         title: 'Gehra Hua',
         artist: 'Shashwat Sachdev, Arijit Singh',
-        audio: 'gehra.mpeg',
+        audio: 'gehra.mp3',
         image: 'https://i.scdn.co/image/ab67616d00001e02c53e5adf9f81693d62f98019'
     },
     {
@@ -157,7 +157,7 @@ const Trendsongs = [
     {
         title: 'Gehra Hua',
         artist: 'Shashwat Sachdev, Arijit Singh',
-        audio: 'gehra.mpeg',
+        audio: 'gehra.mp3',
         image: 'https://i.scdn.co/image/ab67616d00001e02c53e5adf9f81693d62f98019'
     },
     {
@@ -181,7 +181,7 @@ const Trendsongs = [
     {
         title: 'Gehra Hua',
         artist: 'Shashwat Sachdev, Arijit Singh',
-        audio: 'gehra.mpeg',
+        audio: 'gehra.mp3',
         image: 'https://i.scdn.co/image/ab67616d00001e02c53e5adf9f81693d62f98019'
     },
     {
@@ -199,7 +199,7 @@ const Trendsongs = [
     {
         title: 'Gehra Hua',
         artist: 'Shashwat Sachdev, Arijit Singh',
-        audio: 'gehra.mpeg',
+        audio: 'gehra.mp3',
         image: 'https://i.scdn.co/image/ab67616d00001e02c53e5adf9f81693d62f98019'
     },
     {
@@ -223,7 +223,7 @@ const Trendsongs = [
     {
         title: 'Gehra Hua',
         artist: 'Shashwat Sachdev, Arijit Singh',
-        audio: 'gehra.mpeg',
+        audio: 'gehra.mp3',
         image: 'https://i.scdn.co/image/ab67616d00001e02c53e5adf9f81693d62f98019'
     },
     {
@@ -291,7 +291,7 @@ const songs = [
     {
         title: 'Gehra Hua',
         artist: 'Shashwat Sachdev, Arijit Singh',
-        audio: 'gehra.mpeg',
+        audio: 'gehra.mp3',
         image: 'https://i.scdn.co/image/ab67616d00001e02c53e5adf9f81693d62f98019'
     },
     {
@@ -315,7 +315,7 @@ const songs = [
     {
         title: 'Gehra Hua',
         artist: 'Shashwat Sachdev, Arijit Singh',
-        audio: 'gehra.mpeg',
+        audio: 'gehra.mp3',
         image: 'https://i.scdn.co/image/ab67616d00001e02c53e5adf9f81693d62f98019'
     },
     {
@@ -339,7 +339,7 @@ const songs = [
     {
         title: 'Gehra Hua',
         artist: 'Shashwat Sachdev, Arijit Singh',
-        audio: 'gehra.mpeg',
+        audio: 'gehra.mp3',
         image: 'https://i.scdn.co/image/ab67616d00001e02c53e5adf9f81693d62f98019'
     },
     {
@@ -363,7 +363,7 @@ const songs = [
     {
         title: 'Gehra Hua',
         artist: 'Shashwat Sachdev, Arijit Singh',
-        audio: 'gehra.mpeg',
+        audio: 'gehra.mp3',
         image: 'https://i.scdn.co/image/ab67616d00001e02c53e5adf9f81693d62f98019'
     },
     {
@@ -660,6 +660,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, { once: false });
     });
 });
+
 
 
 
