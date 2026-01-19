@@ -41,9 +41,6 @@ function changeImage(img) {
     }
 }
 
-<link rel="preload" href="svg/play.svg" as="image">
-<link rel="preload" href="svg/pause.svg" as="image">
-
 function changeIcon(icon) {
 
     let music = document.querySelector(".music");
@@ -663,6 +660,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, { once: false });
     });
 });
+
 
 
 
