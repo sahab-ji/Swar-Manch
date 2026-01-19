@@ -8,6 +8,19 @@ let currentaudio = null;
   i2.src = "/svg/pause.svg";
 })();
 
+document.addEventListener('DOMContentLoaded', () => {
+    // Preload audio when hovering over cards
+    document.querySelectorAll('.music-card, .card.border').forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            const audio = this.querySelector('.music1');
+            if (audio && audio.readyState < 3) {
+                // Start loading the full audio file
+                audio.load();
+            }
+        }, { once: false });
+    });
+});
+
 
 function changeImage(img) {
     let music = document.querySelector(".music");
@@ -656,18 +669,7 @@ volumeBar.addEventListener("click", (e) => {
 });
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Preload audio when hovering over cards
-    document.querySelectorAll('.music-card, .card.border').forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            const audio = this.querySelector('.music1');
-            if (audio && audio.readyState < 3) {
-                // Start loading the full audio file
-                audio.load();
-            }
-        }, { once: false });
-    });
-});
+
 
 
 
