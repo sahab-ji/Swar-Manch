@@ -1,6 +1,14 @@
 
 let currentaudio = null;
 
+(() => {
+  const i1 = new Image();
+  const i2 = new Image();
+  i1.src = "/svg/play.svg";
+  i2.src = "/svg/pause.svg";
+})();
+
+
 function changeImage(img) {
     let music = document.querySelector(".music");
     music.style.display="grid";
@@ -660,6 +668,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, { once: false });
     });
 });
+
 
 
 
